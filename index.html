@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aspect-Based Sentiment Analysis | Fine-Grained Opinion Mining</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="bg-shapes"></div>
+
+    <div class="container">
+        <header>
+            <div class="logo">
+                <div class="logo-icon">🔍</div>
+                <h1>AspectSentinel</h1>
+            </div>
+            <p class="subtitle">Every review tells a story. Discover the sentiment behind it and turn customer opinions into better experiences.</p>
+            <span class="badge">✨ Analyze Customer Feedback</span>
+        </header>
+
+        <div class="card">
+            <div class="section-title"><span>✍️</span> Enter Customer Review</div>
+            <textarea id="reviewInput" placeholder="Example: The delivery was quick and the product looks great, but it stopped working the next day."></textarea>
+            <div class="btn-row">
+                <button class="btn btn-primary" id="analyzeButton">
+                    ⚡ Analyze Review
+                </button>
+                <button class="btn btn-secondary" id="sampleButton">
+                    📋 Load Sample
+                </button>
+                <button class="btn btn-secondary" id="clearButton">
+                    🗑️ Clear
+                </button>
+            </div>
+            <p id="analysisStatus" class="analysis-status" role="status" aria-live="polite">Ready to analyze.</p>
+
+            <div id="results">
+                <div class="overall-box">
+                    <div class="stat-card">
+                        <div class="stat-label">Overall</div>
+                        <div class="stat-value" id="overallSentiment">—</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-label">😊 Positive</div>
+                        <div class="stat-value pos" id="posCount">0</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-label">😞 Negative</div>
+                        <div class="stat-value neg" id="negCount">0</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-label">😐 Neutral</div>
+                        <div class="stat-value neu" id="neuCount">0</div>
+                    </div>
+                </div>
+
+                <div class="section-title aspects-title"><span>🧩</span> Sentence Analysis</div>
+                <div class="aspect-list" id="aspectList"></div>
+                <button class="btn btn-secondary report-button" id="downloadButton">⬇️ Download Report</button>
+
+                <div class="highlight-section">
+                    <div class="section-title"><span>🎨</span> Review Sentiment Highlight</div>
+                    <div class="highlighted-text" id="highlightedText"></div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            Instant analysis runs locally without a model download. Sarcasm and unusual wording can still affect results.
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
