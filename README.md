@@ -53,5 +53,6 @@ The pretrained model predicts ratings from one to five stars, which the program 
 📚 Created as a college NLP project to explore customer feedback analysis and sentiment classification.
 
 ---
+Project Live Demo- https://juwariah18.github.io/Aspect_Based_Sentiment_Analysis/
 
 💡 **AspectSentinel** — Turning customer reviews into sentiment insights.
